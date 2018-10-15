@@ -1,0 +1,33 @@
+1.如何通过命令行重启linux操作系统？
+
+reboot
+
+
+2、如何在命令行中快速删除光标前/后的内容？
+
+光标前：ctrl+u  光标后： ctrl+p
+
+
+3、如何删除/tmp下所有A开头的文件？
+
+rm -rf /tmp/A*     rm删除 -r递归  -f强制删除，不向用户确认
+
+
+4、系统重要文件需要备份，如何把/etc/passwd备份到/tmp目录下？
+
+cp /etc/passwd /tmp
+
+
+5.如何查看系统最后创建的3个用户？
+
+awk -F “：” ‘{print $1}’ /etc/passwd | tail -3 未理解
+
+
+6、什么命令可以统计当前系统中一共有多少账户？
+
+awk -F “：” ‘{print $1}’ /etc/passwd | wc -l  或者 cat /etc/passwd | wc -l（查看系统用户量）
+
+
+7、如何创建/tmp/test.conf文件？
+
+touch /tmp/test.conf 
